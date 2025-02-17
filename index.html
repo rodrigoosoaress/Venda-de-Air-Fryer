@@ -9,70 +9,79 @@
         body, html {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         /* Container principal */
         .container {
             max-width: 600px;
-            margin: 50px auto;
             padding: 30px;
-            background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
             text-align: center;
+            backdrop-filter: blur(10px);
         }
 
-        /* Imagem do produto */
+        /* Imagem do produto ajustada */
         .product-image {
-            max-width: 80%;
+            width: 100%;
             height: auto;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 10px;
             margin-bottom: 20px;
         }
 
         /* Título do produto */
         .product-title {
-            font-size: 2.2rem;
-            color: #2c3e50;
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
             margin: 15px 0;
         }
 
         /* Descrição do produto */
         .product-description {
             font-size: 1.1rem;
-            color: #7f8c8d;
+            color: #dcdde1;
             line-height: 1.6;
             margin: 0 0 25px;
         }
 
         /* Preço do produto */
         .product-price {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
-            color: #e74c3c;
+            color: #fbc531;
             margin: 20px 0;
         }
 
         /* Botão de compra */
         .buy-button {
-            background-color: #3498db;
+            background: linear-gradient(135deg, #00a8ff, #0097e6);
             color: white;
             border: none;
             padding: 15px 40px;
             font-size: 1.2rem;
             border-radius: 25px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
         }
 
         .buy-button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #0097e6, #00a8ff);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 168, 255, 0.5);
         }
 
         /* Modal de confirmação */
@@ -89,11 +98,13 @@
         }
 
         .modal-content {
-            background-color: white;
+            background: rgba(255, 255, 255, 0.2);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
             max-width: 400px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
         .modal-buttons button {
